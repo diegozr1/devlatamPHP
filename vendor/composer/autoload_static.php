@@ -14,6 +14,7 @@ class ComposerStaticInitcb5b6628e2914ef53ce214c5bbcdef1b
         'S' => 
         array (
             'Slim\\' => 5,
+            'Simplon\\Mysql\\' => 14,
         ),
         'P' => 
         array (
@@ -37,6 +38,10 @@ class ComposerStaticInitcb5b6628e2914ef53ce214c5bbcdef1b
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Simplon\\Mysql\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplon/mysql/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (

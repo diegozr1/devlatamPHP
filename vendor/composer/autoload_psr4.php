@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
+    'Simplon\\Mysql\\' => array($vendorDir . '/simplon/mysql/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),

@@ -20,10 +20,24 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\App;
 $app->views = new League\Plates\Engine('./views', 'tpl');
+$app->views->loadExtension(new League\Plates\Extension\Asset('/assets/', true));
+$sqlBuilder = new \Simplon\Mysql\Manager\SqlQueryBuilder();
 $app->db = "localhost";
 
 $app->get('/', function() use ($app){
 	return $app->views-> render('template');
+});
+
+$app->get("/empresas", function () use($app){
+   return $app->views->render('empresas');
+});
+
+$app->get("/comunidad", function() use($app){
+   return "hola comunidad!";
+});
+
+$app->get("/contacto", function () use($app){
+    return "puedes contactarnos en nuestro correo";
 });
 
 $app->get('/post/{name}', function (Request $request, Response $response) {
