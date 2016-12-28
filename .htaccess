@@ -4,5 +4,5 @@ RewriteEngine on
 #RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
 <Directory "/assets">
-    Options +Indexes
+    Allow from all
 </Directory>
