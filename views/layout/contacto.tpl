@@ -5,16 +5,18 @@
     .fourth-box{padding:10px;background:#6CC;}
 </style>
 <div class="container">
-    <h3>Contacto</h3><br>
-    <p>Somos una comunidad de desarrolladores que busca integrar todo el conocimiento que se encuentra en internet para poder </p>
+    <h3><span class="glyphicon glyphicon-send"></span> Contacto</h3><br>
+    <p>Somos una comunidad de desarrolladores que busca integrar todo el conocimiento que se encuentra en internet en un solo lugar
+    para permitir que los nuevos desarrolladores alcancen una </p>
+    <hr>
     <div class="row text-center">
         <div class="col-sm-3 col-xs-6 first-box">
-            <h1><span class="glyphicon glyphicon-earphone"></span></h1>
-            <h3>Phone</h3>
-            <p>+880-1700-987654</p><br>
+            <h1><span class="glyphicon glyphicon-eye-open"></span></h1>
+            <h3>Objetivo</h3>
+            <p>Educar desarrolladores competitivos</p><br>
         </div>
         <div class="col-sm-3 col-xs-6 second-box">
-            <h1><span class="glyphicon glyphicon-home"></span></h1>
+            <h1><span class="glyphicon glyphicon-globe"></span></h1>
             <h3>Ubicación</h3>
             <p>América Latina</p><br>
         </div>

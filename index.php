@@ -3,15 +3,25 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+use Dflydev\FigCookies\Cookie;
+
 require 'vendor/autoload.php';
 
 /*
- * glassdoor and hackergarage jobs
+ *
+ *
  * https://packagist.org/packages/vinelab/rss
  * https://packagist.org/packages/rmccue/requests
  * https://packagist.org/packages/simplon/mysql
  *
  * https://github.com/akrabat/rka-slim-session-middleware
+ * https://github.com/dflydev/dflydev-fig-cookies
+ *
+ * http://stackoverflow.com/questions/5160307/how-can-i-create-a-tagging-system-using-php-and-mysql
+ * http://bootsnipp.com/snippets/featured/average-user-rating-rating-breakdown
+ * http://bootsnipp.com/snippets/featured/bootstrap-line-tabs-by-keenthemes
+ *
+ * Glassdoor and hackergarage jobs
  * http://jobs.hackergarage.mx/rss/
  * https://www.glassdoor.com/developer/index.htm
  * platzi.com/jobs
@@ -19,10 +29,6 @@ require 'vendor/autoload.php';
  * remoteinternships
  * remotejobs
  *
- * http://stackoverflow.com/questions/5160307/how-can-i-create-a-tagging-system-using-php-and-mysql
- http://bootsnipp.com/snippets/featured/average-user-rating-rating-breakdown
- http://bootsnipp.com/snippets/featured/bootstrap-line-tabs-by-keenthemes
- 
  * codecourse.com
  * scotch.io
  * thinkster.io
@@ -40,13 +46,9 @@ require 'vendor/autoload.php';
  * lynda.com
  * coursera.org
  * edx
-
  * carreercup
  * interviewcake
-
  *
-
-
  * */
 
 $app = new \Slim\App;
@@ -60,7 +62,8 @@ $app->views->addFolder('templates', './views/template');
 $sqlBuilder = new \Simplon\Mysql\Manager\SqlQueryBuilder();
 //$app->db = "";
 
-$app->get('/', function() use ($app){	
+$app->get('/', function() use ($app){
+    $cookie = Cookie::create('contacto', 'registrado');
 	return $app->views->render('templates::main', ['page' => 'bienvenido']);
 });
 
@@ -83,7 +86,9 @@ $app->get('/post/{name}', function (Request $request, Response $response) {
 require './routes/aprende.php';
 
 // practica Routes
+require './routes/practica.php';
 
 // aplica Routes
+require './routes/aplica.php';
 
 $app->run();

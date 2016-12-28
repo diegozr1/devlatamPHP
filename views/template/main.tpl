@@ -56,11 +56,17 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
-            /*$('li a').click(function(e) {
-                e.preventDefault();
-                $('a').removeClass('active');
-                $(this).addClass('active');
-            });*/
+            /* menu highlight */
+            var url = window.location;
+            // Will only work if string in href matches with location
+            $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+
+            // Will also work for relative and absolute hrefs
+            $('ul.nav a').filter(function() {
+              return this.href == url;
+            }).parent().addClass('active');
+
+            /*List of articles */
 
             $('.star').on('click', function () {
               $(this).toggleClass('star-checked');

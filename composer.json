@@ -2,6 +2,7 @@
     "require": {
         "slim/slim": "3.0",
         "league/plates": "3.*",
-        "simplon/mysql": "*"
+        "simplon/mysql": "*",
+        "dflydev/fig-cookies": "^1.0"
     }
 }

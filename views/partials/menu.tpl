@@ -1,6 +1,6 @@
 <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
-        <li><a href="/">Bienvenido <span class="sr-only">(current)</span></a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span>  Bienvenido </a></li>
     </ul>
     <h4>Aprende</h4>
     <ul class="nav nav-sidebar">
@@ -18,6 +18,5 @@
     <ul class="nav nav-sidebar">
         <li><a href="/vacantes"><span class="glyphicon glyphicon-fire"></span> Vacantes</a></li>
         <li><a href="/proyectos"><span class="glyphicon glyphicon-briefcase"></span> Proyectos</a></li>
-        <li><a href="/freelance"><span class="glyphicon glyphicon-sunglasses"></span> Freelance</a></li>
     </ul>
 </div>

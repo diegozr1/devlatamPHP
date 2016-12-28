@@ -15,8 +15,9 @@
                 <li><a href="https://gitter.im/devlatamMX/comunidad" target="_blank">Comunidad</a></li>
                 <li><a href="/contacto">Contacto</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Buscar cursos, preguntas, trabajos..." size="122">
+            <form class="navbar-form navbar-right" method="get">
+                <input type="text" class="form-control" placeholder="Buscar cursos, preguntas, trabajos..." size="110">
+                <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
         </div>
     </div>
